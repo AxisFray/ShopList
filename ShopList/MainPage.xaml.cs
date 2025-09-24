@@ -1,24 +1,27 @@
-﻿namespace ShopList
+using System.Collections.ObjectModel;
+
+namespace ShopList
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        public class Produkt
+        {
+            public string Nazwa { get; set; }
+            public string Obrazek { get; set; }
+        }
 
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void OnCounterClicked(object? sender, EventArgs e)
+            Produkty = new ObservableCollection<Produkt>
         {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            new Produkt { Nazwa = "Apple"},
+            new Produkt { Nazwa = "Mango"}
+        };
+            BindingContext = this;
         }
-    }
+
+        
+        }
 }
