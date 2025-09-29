@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopList.MainPage">
 
-    <ScrollView BackgroundColor="Beige">
+    <StackLayout BackgroundColor="Beige">
 
         
             <Label Text="Shop List" TextColor="Brown" HorizontalTextAlignment="Center"></Label>
@@ -24,6 +24,6 @@
    
     <Button Text="Add" Clicked="OnAddClicked" BackgroundColor="Brown" TextColor="White"/>
 
-        </ScrollView>
+        </StackLayout>
         
 </ContentPage>
