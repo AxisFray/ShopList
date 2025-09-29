@@ -1,4 +1,6 @@
 using System.Collections.ObjectModel;
+using static ShopList.MainPage;
+public ObservableCollection<Produkt> Produkty { get; set; }
 
 namespace ShopList
 {
@@ -22,6 +24,14 @@ namespace ShopList
             BindingContext = this;
         }
 
-        
+        private void OnAddClicked(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(ItemEntry.Text))
+            {
+                Produkty.Add(new Produkt { Nazwa = ItemEntry.Text });
+                ItemEntry.Text = string.Empty;
+            }
         }
+
+    }
 }
