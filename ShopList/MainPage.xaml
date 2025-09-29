@@ -5,7 +5,8 @@
 
     <ScrollView BackgroundColor="Beige">
 
-        <Label Text="Shop List" TextColor="Brown" HorizontalTextAlignment="Center"></Label>
+        
+            <Label Text="Shop List" TextColor="Brown" HorizontalTextAlignment="Center"></Label>
 
 
 
@@ -19,7 +20,10 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Entry Placeholder="Add to the list" TextColor="SandyBrown" BackgroundColor="SaddleBrown" x:Name="{Binding Item}"></Entry>
-    </ScrollView>
+        <Entry Placeholder="Add to the list" TextColor="SandyBrown" BackgroundColor="SaddleBrown" x:Name="ItemEntry"></Entry>
+   
+    <Button Text="Add" Clicked="OnAddClicked" BackgroundColor="Brown" TextColor="White"/>
 
+        </ScrollView>
+        
 </ContentPage>
