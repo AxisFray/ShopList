@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShopList.MainPage">
 
-    <StackLayout BackgroundColor="Beige">
+    <StackLayout BackgroundColor="LightGray">
 
         
-            <Label Text="Shop List" TextColor="Brown" HorizontalTextAlignment="Center"></Label>
+            <Label Text="Shop List" TextColor="Black" FontFamily="fantasy" FontSize="30" HorizontalTextAlignment="Center"></Label>
 
 
 
@@ -20,9 +20,9 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Entry Placeholder="Add to the list" TextColor="SandyBrown" BackgroundColor="SaddleBrown" x:Name="ItemEntry"></Entry>
+        <Entry Placeholder="Add to the list" TextColor="Grey" BackgroundColor="DimGrey" x:Name="ItemEntry"></Entry>
    
-    <Button Text="Add" Clicked="OnAddClicked" BackgroundColor="Brown" TextColor="White"/>
+    <Button Text="Add" Clicked="OnAddClicked" BackgroundColor="Gray" Margin="30" TextColor="White"/>
 
         </StackLayout>
         
