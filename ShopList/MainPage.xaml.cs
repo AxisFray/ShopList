@@ -1,16 +1,16 @@
 using System.Collections.ObjectModel;
 using static ShopList.MainPage;
-public ObservableCollection<Produkt> Produkty { get; set; }
+
 
 namespace ShopList
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        public ObservableCollection<Produkt> Produkty { get; set; }
         public class Produkt
         {
             public string Nazwa { get; set; }
-            public string Obrazek { get; set; }
         }
 
         public MainPage()
