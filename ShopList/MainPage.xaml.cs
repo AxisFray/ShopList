@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Globalization;
 using static ShopList.MainPage;
 
 
@@ -11,6 +12,7 @@ namespace ShopList
         public class Produkt
         {
             public string Nazwa { get; set; }
+            public bool IsDone { get; set; }
         }
 
         public MainPage()
@@ -32,10 +34,32 @@ namespace ShopList
                 ItemEntry.Text = string.Empty;
             }
         }
-
+        
         private void Done(object sender, EventArgs e)
         {
-            
+            var button = sender as Button;
+            var produkt = button?.BindingContext as Produkt;
+            if (produkt != null && Produkty.Contains(produkt))
+            {
+                Produkty.Remove(produkt);
+            }
         }
+        private void OnLabelTapped(object sender, EventArgs e)
+        {
+            var label = sender as Label;
+            var produkt = label?.BindingContext as Produkt;
+
+            if (produkt != null)
+            {
+                produkt.IsDone = true;
+
+                // Przenieś na koniec listy
+                Produkty.Remove(produkt);
+                Produkty.Add(produkt);
+                
+            }
+        }
+        
+
     }
 }
