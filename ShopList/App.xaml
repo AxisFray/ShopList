@@ -8,6 +8,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <local:IsDoneToColorConverter x:Key="IsDoneToColorConverter" />
+                <local:DoneToTextDecorationConverter x:Key="BoolToTextDecorationConverter" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
