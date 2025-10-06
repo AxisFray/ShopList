@@ -1,6 +1,8 @@
 using System.Collections.ObjectModel;
 using System.Globalization;
 using static ShopList.MainPage;
+using Microsoft.Maui.Graphics;
+
 
 
 namespace ShopList
@@ -26,7 +28,7 @@ namespace ShopList
             BindingContext = this;
         }
 
-        private void OnAddClicked(object sender, EventArgs e)
+        public void OnAddClicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(ItemEntry.Text))
             {
@@ -59,6 +61,8 @@ namespace ShopList
                 
             }
         }
+
+        
         
 
     }
