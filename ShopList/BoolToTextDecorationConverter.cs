@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShopList
 {
-    internal class BoolToTextDecorationConverter
+    public class BoolToTextDecorationConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
