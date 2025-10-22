@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopList.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout>
+        <Label Text="Log in" FontSize="40" HorizontalTextAlignment="Center" Margin="10"></Label>
+        <Label Text="E-mail" TextColor="Gray" FontSize="15"></Label>
+        <Entry x:Name="email" FontSize="30" TextColor="Black" FontFamily="fantasy"></Entry>
+        <Label Text="Password" TextColor="Gray" FontSize="15"></Label>
+        <Entry x:Name="password" FontSize="30" FontFamily="fantasy" TextColor="black" IsPassword="True"></Entry>
+    </VerticalStackLayout>
+</ContentPage>

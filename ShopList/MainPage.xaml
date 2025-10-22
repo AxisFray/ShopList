@@ -14,7 +14,7 @@
                             <Grid>
                                 <Grid.BackgroundColor>
                                     <Binding Path="IsDone">
-                                        <Binding Converter="{StaticResource IsDoneToColorConverter}" />
+                                        <Binding Converter="{Binding IsDoneToColorConverter}" />
 
                                     </Binding>
                                 </Grid.BackgroundColor>
